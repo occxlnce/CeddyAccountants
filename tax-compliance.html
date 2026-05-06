@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tax Services in Boksburg, Gauteng | VAT, PAYE, Company Tax & Compliance | Ceddy Accountants</title>
+<meta name="description" content="Expert tax services in Boksburg, Gauteng. VAT 201, EMP 201/501, ITR14, ITR12, Provisional Tax, CIPC Returns, tax clearance & compliance. SARS registered tax practitioners.">
+<meta name="keywords" content="tax services Boksburg, VAT services Gauteng, PAYE tax, company tax returns, SARS tax practitioner, tax compliance Boksburg, VAT 201, EMP 201, ITR14, ITR12, provisional tax, tax clearance, CIPC returns, BBBEE affidavits, tax accountant Gauteng">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Tax Services in Boksburg, Gauteng | VAT, PAYE, Company Tax | Ceddy Accountants">
+<meta property="og:description" content="Expert tax services in Boksburg, Gauteng. VAT 201, EMP 201/501, ITR14, ITR12, Provisional Tax, CIPC Returns, tax clearance & compliance. SARS registered tax practitioners.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ceddyaccountants.co.za/tax-compliance.html">
+<meta property="og:image" content="https://res.cloudinary.com/dgwtaivvf/image/upload/v1778057865/Symbol-CA_kmvjfh.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Tax Services in Boksburg, Gauteng | VAT, PAYE, Company Tax | Ceddy Accountants">
+<meta name="twitter:description" content="Expert tax services in Boksburg, Gauteng. VAT 201, EMP 201/501, ITR14, ITR12, Provisional Tax, CIPC Returns, tax clearance & compliance.">
+<meta name="twitter:image" content="https://res.cloudinary.com/dgwtaivvf/image/upload/v1778057865/Symbol-CA_kmvjfh.png">
+<link rel="canonical" href="https://ceddyaccountants.co.za/tax-compliance.html">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="icon" type="image/png" href="https://res.cloudinary.com/dgwtaivvf/image/upload/v1778057865/Symbol-CA_kmvjfh.png">
+<style>
+.tax-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1px;
+  background: var(--rule);
+  border: 1px solid var(--rule);
+}
+@media (min-width: 760px) { .tax-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1100px) { .tax-grid { grid-template-columns: repeat(3, 1fr); } }
+
+.tax-cell {
+  background: var(--paper);
+  padding: 36px 30px;
+  position: relative;
+  transition: background .35s ease;
+}
+.tax-cell:hover { background: #ffffff; }
+.tax-cell::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 0; height: 2px;
+  background: var(--muted-gold);
+  transition: width .4s ease;
+}
+.tax-cell:hover::before { width: 100%; }
+.tax-cell .code {
+  font-family: var(--serif);
+  font-size: 32px;
+  color: var(--midnight-teal);
+  line-height: 1;
+  letter-spacing: -0.01em;
+}
+.tax-cell .code em {
+  color: var(--muted-gold);
+  font-style: normal;
+}
+.tax-cell h4 {
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--slate-blue);
+  margin: 16px 0 12px;
+}
+.tax-cell p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--slate-blue);
+  margin: 0;
+}
+
+/* Section header for Returns vs Statutory */
+.tax-section-label {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 30px;
+}
+.tax-section-label .num {
+  font-family: var(--serif);
+  font-size: 60px;
+  line-height: 1;
+  color: var(--gold-soft);
+}
+.tax-section-label .title {
+  font-family: var(--serif);
+  font-size: 32px;
+  color: var(--midnight-teal);
+}
+.tax-section-label .desc {
+  margin-left: auto;
+  max-width: 360px;
+  font-size: 14px;
+  color: var(--slate-blue);
+  line-height: 1.7;
+}
+
+/* Compliance band */
+.compliance-band {
+  background: var(--midnight-teal);
+  color: var(--paper);
+  padding: clamp(80px, 10vw, 130px) 0;
+  position: relative;
+  overflow: hidden;
+}
+.compliance-band::before {
+  content: "SARS · CIPC · DOL";
+  position: absolute;
+  bottom: -40px; left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--serif);
+  font-size: clamp(80px, 14vw, 200px);
+  white-space: nowrap;
+  color: rgba(175,134,74,0.05);
+  letter-spacing: -0.02em;
+  pointer-events: none;
+}
+.compliance-band .container { position: relative; z-index: 2; text-align: center; }
+.compliance-band h2 { color: var(--paper); max-width: 880px; margin: 0 auto; }
+.compliance-band h2 em { font-style: italic; color: var(--gold-soft); }
+.compliance-band .lede {
+  margin: 30px auto 0;
+  max-width: 720px;
+  font-size: 18px;
+  line-height: 1.75;
+  color: rgba(242,242,242,0.78);
+}
+
+/* Creative Tax Accordion */
+.tax-accordion {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.accordion-item {
+  background: rgba(255,255,255,0.9);
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 16px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  transition: all .4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  backdrop-filter: blur(20px);
+  box-shadow: var(--shadow-sm);
+}
+
+.accordion-item:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--muted-gold);
+  background: rgba(255,255,255,0.95);
+}
+
+.accordion-header {
+  display: flex;
+  align-items: center;
+  padding: 28px;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+  transition: all .3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.accordion-item:hover .accordion-header {
+  padding: 28px 28px 28px 32px;
+}
+
+.accordion-icon {
+  width: 52px;
+  height: 52px;
+  background: linear-gradient(135deg, var(--muted-gold), var(--gold-soft));
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 24px;
+  transition: all .4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: var(--shadow-sm);
+}
+
+.accordion-icon i {
+  color: var(--paper);
+  font-size: 20px;
+}
+
+.accordion-item:hover .accordion-icon {
+  transform: scale(1.1);
+}
+
+.accordion-title {
+  flex: 1;
+}
+
+.accordion-title h3 {
+  margin: 0 0 8px;
+  color: var(--midnight-teal);
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.frequency-badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: rgba(175, 134, 74, 0.1);
+  color: var(--muted-gold);
+}
+
+
+.accordion-toggle {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.accordion-toggle i {
+  color: var(--muted-gold);
+  font-size: 16px;
+}
+
+.accordion-item.active .accordion-toggle {
+  transform: rotate(180deg);
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.accordion-item.active .accordion-content {
+  max-height: 300px;
+}
+
+.content-inner {
+  padding: 0 24px 24px 92px;
+}
+
+.deadline-info {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 16px;
+  padding: 16px;
+  background: rgba(19,56,79,0.03);
+  border-radius: 8px;
+}
+
+.deadline-icon {
+  width: 36px;
+  height: 36px;
+  background: var(--muted-gold);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 16px;
+  flex-shrink: 0;
+}
+
+.deadline-icon i {
+  color: var(--paper);
+  font-size: 16px;
+}
+
+.deadline-text {
+  flex: 1;
+}
+
+.deadline-text strong {
+  color: var(--midnight-teal);
+  font-weight: 600;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.deadline-text em {
+  color: var(--slate-blue);
+  font-size: 13px;
+  font-style: italic;
+}
+
+.content-inner p {
+  color: var(--slate-blue);
+  line-height: 1.6;
+  margin: 0;
+  font-size: 14px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .accordion-header {
+    padding: 20px;
+  }
+  
+  .accordion-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 16px;
+  }
+  
+  .accordion-icon i {
+    font-size: 18px;
+  }
+  
+  .accordion-title h3 {
+    font-size: 18px;
+  }
+  
+  .content-inner {
+    padding: 0 20px 20px 76px;
+  }
+  
+  .deadline-info {
+    flex-direction: column;
+  }
+  
+  .deadline-icon {
+    margin-right: 0;
+    margin-bottom: 12px;
+  }
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-inner">
+    <a href="index.html" class="brand"><div class="brand-mark" style="background: url('https://res.cloudinary.com/dgwtaivvf/image/upload/v1778057865/Symbol-CA_kmvjfh.png') center/contain; background-repeat: no-repeat; width: 40px; height: 40px;"></div></a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="tax-compliance.html">Tax &amp; Compliance</a>
+      <a href="leadership.html">Leadership</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a href="contact.html" class="nav-cta">Book Consultation <span class="arr">→</span></a>
+    <button class="nav-toggle"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+
+<section class="page-hero" style="background: #13384f73 url('https://res.cloudinary.com/dgwtaivvf/image/upload/v1778057887/brand_photograph1_cmnsnv.png') center/cover; color: var(--midnight-teal);">
+  <div class="container">
+    <div class="page-hero-grid">
+      <div>
+        <div class="kicker">
+          <span class="line"></span>
+          <span class="eyebrow" style="color: var(--gold-soft)">Tax &amp; Compliance</span>
+        </div>
+        <h1>Submitted, reconciled,<br>on time.</h1>
+        <p class="lede">Compliance is what keeps a business operating — quietly, consistently and without surprises. We submit, we file, we advise. For both companies and individuals, in the eyes of SARS.</p>
+      </div>
+      <div class="page-hero-meta">
+        Filings handled
+        <span style="margin-top:14px;">SARS · ALL RETURNS</span>
+        <span>CIPC · ANNUAL RETURNS</span>
+        <span>DOL · UIF · COIDA</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Tax returns -->
+<section>
+  <div class="container">
+    <div class="tax-section-label reveal">
+      <div class="num">/01</div>
+      <div class="title">Tax Returns We Submit</div>
+      <div class="desc">For both companies and individuals — registered, calculated, reconciled and submitted to SARS within their statutory deadlines.</div>
+    </div>
+
+    <div class="tax-grid reveal">
+      <div class="tax-cell">
+        <div class="code">VAT <em>201</em></div>
+        <h4>Value-Added Tax</h4>
+        <p>Bi-monthly or monthly VAT submissions for VAT-registered entities, with full reconciliation against the books.</p>
+      </div>
+      <div class="tax-cell">
+        <div class="code">EMP <em>201</em></div>
+        <h4>Monthly Employer</h4>
+        <p>Monthly PAYE, UIF and SDL declarations and payments — calculated against payroll runs.</p>
+      </div>
+      <div class="tax-cell">
+        <div class="code">EMP <em>501</em></div>
+        <h4>Bi-Annual Reconciliation</h4>
+        <p>Bi-annual employer reconciliations, including IRP5 and IT3(a) certificate issuance for staff.</p>
+      </div>
+      <div class="tax-cell">
+        <div class="code">ITR <em>14</em></div>
+        <h4>Company Tax Return</h4>
+        <p>Annual income tax return for companies and CCs — tied directly to the compiled annual financial statements.</p>
+      </div>
+      <div class="tax-cell">
+        <div class="code">ITR <em>12</em></div>
+        <h4>Individual Tax Return</h4>
+        <p>Annual personal income tax for sole proprietors, directors, salary earners and rental property owners.</p>
+      </div>
+      <div class="tax-cell">
+        <div class="code">IRP <em>6</em></div>
+        <h4>Provisional Tax</h4>
+        <p>First and second provisional tax returns for companies and qualifying individuals — bi-annual.</p>
+      </div>
+      <div class="tax-cell">
+        <div class="code">DTR <em>02</em></div>
+        <h4>Dividends Tax</h4>
+        <p>DTR returns where applicable to shareholders — calculated and submitted within the SARS window.</p>
+      </div>
+      <div class="tax-cell">
+        <div class="code">TCS <em>·</em></div>
+        <h4>Tax Clearance</h4>
+        <p>Application and renewal of tax compliance status — for tenders, foreign investment allowance, or general good standing.</p>
+      </div>
+      <div class="tax-cell">
+        <div class="code">REG <em>·</em></div>
+        <h4>Registrations</h4>
+        <p>VAT registration, PAYE/UIF/SDL registration and tax type activation — done once, done correctly.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Statutory & Payroll -->
+<section style="background: var(--paper); border-top: 1px solid var(--rule);">
+  <div class="container">
+    <div class="tax-section-label reveal">
+      <div class="num">/02</div>
+      <div class="title">Statutory &amp; Payroll</div>
+      <div class="desc">The filings beyond SARS that keep your business in good standing — UIF, COIDA, CIPC, BBBEE.</div>
+    </div>
+
+    <div class="tax-grid reveal">
+      <div class="tax-cell">
+        <div class="code">u<em>Filing</em></div>
+        <h4>UIF Online</h4>
+        <p>Online UIF declarations and monthly payments via the Department of Labour's uFiling system.</p>
+      </div>
+      <div class="tax-cell">
+        <div class="code">CO<em>IDA</em></div>
+        <h4>Compensation Fund</h4>
+        <p>Annual Return of Earnings (ROE) submissions and Letter of Good Standing — required for tenders and contracts.</p>
+      </div>
+      <div class="tax-cell">
+        <div class="code">PAY<em>roll</em></div>
+        <h4>Monthly Payroll</h4>
+        <p>PAYE, UIF and SDL processing with monthly payslips, IRP5s, leave balances and bi-annual reconciliations.</p>
+      </div>
+      <div class="tax-cell">
+        <div class="code">CI<em>PC</em></div>
+        <h4>Annual Returns</h4>
+        <p>Keeping your company in good standing with the regulator — annual returns, beneficial ownership, amendments.</p>
+      </div>
+      <div class="tax-cell">
+        <div class="code">BB<em>BEE</em></div>
+        <h4>Affidavits</h4>
+        <p>EME and QSE affidavits for qualifying entities — required for tenders, supplier listings and customer onboarding.</p>
+      </div>
+      <div class="tax-cell">
+        <div class="code">SARS <em>·</em></div>
+        <h4>Objections &amp; Disputes</h4>
+        <p>Notices of objection, requests for remission and dispute resolution where assessments don't reflect reality.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Quick reference -->
+<section style="background: #ffffff;">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="kicker">
+        <span class="line"></span>
+        <span class="eyebrow">Quick Reference</span>
+      </div>
+      <h2>What's due, when.</h2>
+      <p>A simplified view of major submission frequencies. Specific deadlines depend on your entity, financial year-end and tax registration.</p>
+    </div>
+
+    <div class="tax-accordion reveal">
+      <!-- VAT 201 -->
+      <div class="accordion-item" data-frequency="bi-monthly">
+        <div class="accordion-header">
+          <div class="accordion-icon">
+            <i class="fas fa-receipt"></i>
+          </div>
+          <div class="accordion-title">
+            <h3>VAT 201</h3>
+            <span class="frequency-badge bi-monthly">Bi-Monthly</span>
+          </div>
+          <div class="accordion-toggle">
+            <i class="fas fa-chevron-down"></i>
+          </div>
+        </div>
+        <div class="accordion-content">
+          <div class="content-inner">
+            <div class="deadline-info">
+              <div class="deadline-icon">
+                <i class="fas fa-calendar-alt"></i>
+              </div>
+              <div class="deadline-text">
+                <strong>Deadline:</strong> 25th of the month following the tax period
+                <em>(or last business day for eFiling)</em>
+              </div>
+            </div>
+            <p>Value-Added Tax submissions for VAT-registered entities, with full reconciliation against the books.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- EMP 201 -->
+      <div class="accordion-item" data-frequency="monthly">
+        <div class="accordion-header">
+          <div class="accordion-icon">
+            <i class="fas fa-users"></i>
+          </div>
+          <div class="accordion-title">
+            <h3>EMP 201</h3>
+            <span class="frequency-badge monthly">Monthly</span>
+          </div>
+          <div class="accordion-toggle">
+            <i class="fas fa-chevron-down"></i>
+          </div>
+        </div>
+        <div class="accordion-content">
+          <div class="content-inner">
+            <div class="deadline-info">
+              <div class="deadline-icon">
+                <i class="fas fa-calendar-alt"></i>
+              </div>
+              <div class="deadline-text">
+                <strong>Deadline:</strong> 7th of every month
+              </div>
+            </div>
+            <p>PAYE, UIF and SDL submissions on the prior month's payroll.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- EMP 501 -->
+      <div class="accordion-item" data-frequency="bi-annual">
+        <div class="accordion-header">
+          <div class="accordion-icon">
+            <i class="fas fa-balance-scale"></i>
+          </div>
+          <div class="accordion-title">
+            <h3>EMP 501</h3>
+            <span class="frequency-badge bi-annual">Bi-Annual</span>
+          </div>
+          <div class="accordion-toggle">
+            <i class="fas fa-chevron-down"></i>
+          </div>
+        </div>
+        <div class="accordion-content">
+          <div class="content-inner">
+            <div class="deadline-info">
+              <div class="deadline-icon">
+                <i class="fas fa-calendar-alt"></i>
+              </div>
+              <div class="deadline-text">
+                <strong>Deadlines:</strong> August (interim) and May (annual)
+              </div>
+            </div>
+            <p>Full payroll reconciliation against EMP 201s.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Provisional Tax -->
+      <div class="accordion-item" data-frequency="bi-annual">
+        <div class="accordion-header">
+          <div class="accordion-icon">
+            <i class="fas fa-coins"></i>
+          </div>
+          <div class="accordion-title">
+            <h3>Provisional Tax</h3>
+            <span class="frequency-badge bi-annual">Bi-Annual</span>
+          </div>
+          <div class="accordion-toggle">
+            <i class="fas fa-chevron-down"></i>
+          </div>
+        </div>
+        <div class="accordion-content">
+          <div class="content-inner">
+            <div class="deadline-info">
+              <div class="deadline-icon">
+                <i class="fas fa-calendar-alt"></i>
+              </div>
+              <div class="deadline-text">
+                <strong>Deadlines:</strong> First payment 6 months into year, second by year-end
+                <em>Top-up optional within 6 months</em>
+              </div>
+            </div>
+            <p>Provisional tax payments based on estimated annual income.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ITR14 / ITR12 -->
+      <div class="accordion-item" data-frequency="annual">
+        <div class="accordion-header">
+          <div class="accordion-icon">
+            <i class="fas fa-file-invoice"></i>
+          </div>
+          <div class="accordion-title">
+            <h3>ITR14 / ITR12</h3>
+            <span class="frequency-badge annual">Annual</span>
+          </div>
+          <div class="accordion-toggle">
+            <i class="fas fa-chevron-down"></i>
+          </div>
+        </div>
+        <div class="accordion-content">
+          <div class="content-inner">
+            <div class="deadline-info">
+              <div class="deadline-icon">
+                <i class="fas fa-calendar-alt"></i>
+              </div>
+              <div class="deadline-text">
+                <strong>Deadlines:</strong> 12 months after financial year-end (ITR14)
+                <em>SARS filing season (ITR12)</em>
+              </div>
+            </div>
+            <p>Annual income tax returns for companies and individuals.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CIPC Annual Return -->
+      <div class="accordion-item" data-frequency="annual">
+        <div class="accordion-header">
+          <div class="accordion-icon">
+            <i class="fas fa-building"></i>
+          </div>
+          <div class="accordion-title">
+            <h3>CIPC Annual Return</h3>
+            <span class="frequency-badge annual">Annual</span>
+          </div>
+          <div class="accordion-toggle">
+            <i class="fas fa-chevron-down"></i>
+          </div>
+        </div>
+        <div class="accordion-content">
+          <div class="content-inner">
+            <div class="deadline-info">
+              <div class="deadline-icon">
+                <i class="fas fa-calendar-alt"></i>
+              </div>
+              <div class="deadline-text">
+                <strong>Deadline:</strong> Within 30 business days of company's anniversary date
+              </div>
+            </div>
+            <p>Annual return filing with CIPC to maintain company status.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- COIDA ROE -->
+      <div class="accordion-item" data-frequency="annual">
+        <div class="accordion-header">
+          <div class="accordion-icon">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <div class="accordion-title">
+            <h3>COIDA ROE</h3>
+            <span class="frequency-badge annual">Annual</span>
+          </div>
+          <div class="accordion-toggle">
+            <i class="fas fa-chevron-down"></i>
+          </div>
+        </div>
+        <div class="accordion-content">
+          <div class="content-inner">
+            <div class="deadline-info">
+              <div class="deadline-icon">
+                <i class="fas fa-calendar-alt"></i>
+              </div>
+              <div class="deadline-text">
+                <strong>Deadline:</strong> Usually by end of May
+                <em>For prior year earnings declared</em>
+              </div>
+            </div>
+            <p>Return of Earnings for Compensation Fund compliance.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Compliance band -->
+<section class="compliance-band">
+  <div class="container reveal">
+    <div class="kicker" style="justify-content: center;">
+      <span class="line" style="background: var(--gold-soft)"></span>
+      <span class="eyebrow" style="color: var(--gold-soft)">Why It Matters</span>
+    </div>
+    <h2>Stay compliant with SARS and regulatory bodies — <em>without surprises</em>.</h2>
+    <p class="lede">
+      The cost of catching up is always higher than the cost of staying current. Penalties, interest, lost tax clearance, refused tenders, frozen banking — these are the surprises that derail otherwise healthy businesses. Our role is to make sure they don't reach you.
+    </p>
+    <div style="margin-top: 40px; display: flex; gap: 14px; flex-wrap: wrap; justify-content: center;">
+      <a href="contact.html" class="btn btn-gold">Book a Compliance Review <span class="arr">→</span></a>
+      <a href="services.html" class="btn btn-ghost">All Services <span class="arr">→</span></a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-logo">
+          <img src="https://res.cloudinary.com/dgwtaivvf/image/upload/v1778057889/Wordmark-CA_v1gxqy.png" alt="Ceddy Accountants" style="width: 200px; height: auto; margin-bottom: 16px;">
+        </div>
+        <p class="footer-blurb">A South African accounting firm helping individuals, startups and SMEs stay compliant, organised and ready for growth.</p>
+      </div>
+      <div class="footer-col"><h5>Explore</h5><ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="tax-compliance.html">Tax &amp; Compliance</a></li>
+        <li><a href="leadership.html">Leadership</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul></div>
+      <div class="footer-col"><h5>Services</h5><ul>
+        <li><a href="services.html">Bookkeeping</a></li>
+        <li><a href="services.html">Financial Statements</a></li>
+        <li><a href="tax-compliance.html">Tax Returns</a></li>
+        <li><a href="services.html">CIPC Registration</a></li>
+        <li><a href="services.html">Payroll</a></li>
+        <li><a href="services.html">Audit Support</a></li>
+      </ul></div>
+      <div class="footer-col"><h5>Contact</h5><ul>
+        <li>Boksburg, Gauteng, 1459</li>
+        <li><a href="mailto:ceddymokhudu@gmail.com">ceddymokhudu@gmail.com</a></li>
+        <li><a href="tel:+27787056079">+27 78 705 6079</a></li>
+        <li><a href="tel:+27729083555">+27 72 908 3555</a></li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Ceddy Accountants (Pty) Ltd · Reg. 2020/643822/07</span>
+      <span>SAIPA Member · SARS Tax Practitioner · CIPC Authorised Filer</span>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+<script>
+// Accordion functionality
+document.addEventListener('DOMContentLoaded', function() {
+  const accordionItems = document.querySelectorAll('.accordion-item');
+  
+  accordionItems.forEach(item => {
+    const header = item.querySelector('.accordion-header');
+    
+    header.addEventListener('click', function() {
+      // Close all other items
+      accordionItems.forEach(otherItem => {
+        if (otherItem !== item) {
+          otherItem.classList.remove('active');
+        }
+      });
+      
+      // Toggle current item
+      item.classList.toggle('active');
+    });
+  });
+  
+  // Add hover effect for frequency badges
+  const badges = document.querySelectorAll('.frequency-badge');
+  badges.forEach(badge => {
+    badge.addEventListener('mouseenter', function() {
+      this.style.transform = 'scale(1.05)';
+    });
+    badge.addEventListener('mouseleave', function() {
+      this.style.transform = 'scale(1)';
+    });
+  });
+});
+</script>
+</body>
+</html>

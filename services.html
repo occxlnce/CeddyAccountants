@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Accounting Services in Boksburg, Gauteng | Bookkeeping, Tax & Company Registration | Ceddy Accountants</title>
+<meta name="description" content="Professional accounting services in Boksburg, Gauteng. Expert bookkeeping, tax services, company registration, payroll, financial statements & business advisory. SAIPA-registered accountants.">
+<meta name="keywords" content="accounting services Boksburg, bookkeeping Gauteng, tax services Boksburg, company registration Gauteng, payroll services, financial statements, business advisory, VAT services, audit support, SAIPA accountant, professional accountant Boksburg">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Accounting Services in Boksburg, Gauteng | Ceddy Accountants">
+<meta property="og:description" content="Professional accounting services in Boksburg, Gauteng. Expert bookkeeping, tax services, company registration, payroll, financial statements & business advisory.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ceddyaccountants.co.za/services.html">
+<meta property="og:image" content="https://res.cloudinary.com/dgwtaivvf/image/upload/v1778057865/Symbol-CA_kmvjfh.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Accounting Services in Boksburg, Gauteng | Ceddy Accountants">
+<meta name="twitter:description" content="Professional accounting services in Boksburg, Gauteng. Expert bookkeeping, tax services, company registration, payroll, financial statements & business advisory.">
+<meta name="twitter:image" content="https://res.cloudinary.com/dgwtaivvf/image/upload/v1778057865/Symbol-CA_kmvjfh.png">
+<link rel="canonical" href="https://ceddyaccountants.co.za/services.html">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="icon" type="image/png" href="https://res.cloudinary.com/dgwtaivvf/image/upload/v1778057865/Symbol-CA_kmvjfh.png">
+<style>
+.svc-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1px;
+  background: var(--rule);
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+}
+
+.svc-row {
+  background: rgba(255,255,255,0.8);
+  border: 1px solid rgba(0,0,0,0.06);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  padding: 40px;
+  align-items: start;
+  transition: all .4s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 16px;
+  margin-bottom: 16px;
+  backdrop-filter: blur(20px);
+  box-shadow: var(--shadow-sm);
+  position: relative;
+}
+.svc-row:hover { 
+  background: rgba(255,255,255,0.95); 
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--muted-gold);
+}
+
+@media (min-width: 900px) {
+  .svc-row {
+    grid-template-columns: 80px 1.2fr 1.8fr;
+    gap: 40px;
+    padding: 50px;
+  }
+}
+
+.svc-row .svc-num {
+  font-family: var(--serif);
+  font-size: 16px;
+  color: var(--muted-gold);
+  letter-spacing: 0.05em;
+  padding-top: 8px;
+}
+.svc-row h3 {
+  font-family: var(--serif);
+  font-size: clamp(28px, 3vw, 40px);
+  line-height: 1.1;
+  color: var(--midnight-teal);
+  margin: 0;
+}
+.svc-row .svc-tag {
+  display: inline-block;
+  margin-top: 14px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--slate-blue);
+}
+.svc-row p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--slate-blue);
+}
+.svc-row p strong { color: var(--midnight-teal); font-weight: 500; }
+
+/* Service card hover icons */
+.svc-row {
+  position: relative;
+}
+
+.svc-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 24px;
+  color: var(--muted-gold);
+  opacity: 0;
+  transform: scale(0.8) translateY(10px);
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.svc-row:hover .svc-icon {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+}
+
+.svc-row .svc-includes {
+  margin-top: 24px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--muted-gold);
+}
+.svc-row .svc-tags {
+  margin-top: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* Industries band */
+.industries {
+  background: var(--midnight-teal);
+  color: var(--paper);
+  position: relative;
+  overflow: hidden;
+}
+.industries::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 90% 10%, rgba(175,134,74,0.18), transparent 50%),
+    radial-gradient(ellipse at 10% 90%, rgba(67,105,128,0.3), transparent 60%);
+}
+.industries .container { position: relative; z-index: 2; }
+.industries h2 { color: var(--paper); }
+.industries .lede {
+  margin-top: 20px;
+  max-width: 680px;
+  font-size: 17px;
+  line-height: 1.75;
+  color: rgba(242,242,242,0.78);
+}
+
+/* Vertical Carousel */
+.industries-carousel {
+  margin-top: 50px;
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-track {
+  display: flex;
+  flex-direction: column;
+  animation: verticalScroll 20s linear infinite;
+}
+
+.carousel-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes verticalScroll {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+.industry-tile {
+  padding: 22px 20px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 8px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--paper);
+  transition: all 0.3s ease;
+  margin-bottom: 14px;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.industry-tile:hover {
+  background: rgba(255,255,255,0.08);
+  border-color: var(--gold-soft);
+  transform: scale(1.02);
+}
+.industry-tile:hover {
+  background: rgba(175,134,74,0.1);
+  border-color: rgba(175,134,74,0.6);
+}
+
+/* Process strip */
+.process { background: #ffffff; }
+.process-grid {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  border-left: 1px solid var(--rule);
+}
+@media (min-width: 880px) { .process-grid { grid-template-columns: repeat(4, 1fr); } }
+.process-step {
+  padding: 36px 30px;
+  border-right: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  border-top: 1px solid var(--rule);
+}
+.process-step .pnum {
+  font-family: var(--serif);
+  font-size: 56px;
+  line-height: 1;
+  color: var(--gold-soft);
+}
+.process-step h4 {
+  margin: 14px 0 10px;
+  font-family: var(--serif);
+  font-size: 22px;
+  color: var(--midnight-teal);
+}
+.process-step p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--slate-blue);
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-inner">
+    <a href="index.html" class="brand"><div class="brand-mark" style="background: url('https://res.cloudinary.com/dgwtaivvf/image/upload/v1778057865/Symbol-CA_kmvjfh.png') center/contain; background-repeat: no-repeat; width: 40px; height: 40px;"></div></a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="tax-compliance.html">Tax &amp; Compliance</a>
+      <a href="leadership.html">Leadership</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a href="contact.html" class="nav-cta">Book Consultation <span class="arr">→</span></a>
+    <button class="nav-toggle"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+
+<section class="page-hero" style="background: #13384f73 url('https://res.cloudinary.com/dgwtaivvf/image/upload/v1778057907/desk_workspace_tsgggj.png') center/cover; color: var(--midnight-teal);">
+  <div class="container">
+    <div class="page-hero-grid">
+      <div>
+        <div class="kicker">
+          <span class="line"></span>
+          <span class="eyebrow" style="color: var(--gold-soft)">Our Services</span>
+        </div>
+        <h1>From registration<br>to reporting.</h1>
+        <p class="lede">A complete suite of accounting, tax and advisory services for individuals, startups and SMEs across every industry — compliance to growth advisory, handled directly by a SAIPA-registered Professional Accountant.</p>
+      </div>
+      <div class="page-hero-meta">
+        Services rendered
+        <span style="margin-top:14px;">8 CORE SERVICE LINES</span>
+        <span>EVERY ENTITY TYPE</span>
+        <span>EVERY INDUSTRY</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Service list -->
+<section style="padding: 0;">
+  <div class="container">
+    <div class="svc-list">
+
+      <div class="svc-row reveal">
+        <i class="fas fa-book svc-icon"></i>
+        <div class="svc-num">/ 01</div>
+        <div>
+          <h3>Bookkeeping</h3>
+          <div class="svc-tag">Daily &amp; Monthly</div>
+        </div>
+        <div>
+          <p>Day-to-day capturing of your financials in your chosen system or in <strong>Pastel — our preferred package</strong> — so that month-end and year-end run efficiently and at minimal cost.</p>
+          <div class="svc-includes">Includes</div>
+          <div class="svc-tags chip-row">
+            <span class="chip">Bank reconciliations</span>
+            <span class="chip">Debtors &amp; creditors</span>
+            <span class="chip">VAT recon</span>
+            <span class="chip">Monthly trial balance</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="svc-row reveal">
+        <i class="fas fa-file-invoice-dollar svc-icon"></i>
+        <div class="svc-num">/ 02</div>
+        <div>
+          <h3>Financial Statements</h3>
+          <div class="svc-tag">Annual</div>
+        </div>
+        <div>
+          <p>Compilation of annual financial statements that meet South African reporting standards and are <strong>ready for submission, audit, lender review or investor due diligence</strong>.</p>
+          <div class="svc-includes">Includes</div>
+          <div class="svc-tags chip-row">
+            <span class="chip">AFS compilation</span>
+            <span class="chip">Notes &amp; disclosures</span>
+            <span class="chip">Director's report</span>
+            <span class="chip">Audit-ready files</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="svc-row reveal">
+        <i class="fas fa-chart-line svc-icon"></i>
+        <div class="svc-num">/ 03</div>
+        <div>
+          <h3>Financial Reporting &amp; Analysis</h3>
+          <div class="svc-tag">Decision-Ready</div>
+        </div>
+        <div>
+          <p>Reports that translate your numbers into decisions — <strong>margins, runway, cash position</strong> and the early signals that matter to a growing business.</p>
+          <div class="svc-includes">Includes</div>
+          <div class="svc-tags chip-row">
+            <span class="chip">Management accounts</span>
+            <span class="chip">Variance analysis</span>
+            <span class="chip">KPI dashboards</span>
+            <span class="chip">Margin review</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="svc-row reveal">
+        <i class="fas fa-lightbulb svc-icon"></i>
+        <div class="svc-num">/ 04</div>
+        <div>
+          <h3>Business Advisory</h3>
+          <div class="svc-tag">Growth-Focused</div>
+        </div>
+        <div>
+          <p>Practical guidance on <strong>structure, growth, pricing</strong> and the financial mechanics of running a sustainable business in the South African environment.</p>
+          <div class="svc-includes">Includes</div>
+          <div class="svc-tags chip-row">
+            <span class="chip">Pricing strategy</span>
+            <span class="chip">Cost structure</span>
+            <span class="chip">Funding readiness</span>
+            <span class="chip">Growth planning</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="svc-row reveal">
+        <i class="fas fa-building svc-icon"></i>
+        <div class="svc-num">/ 05</div>
+        <div>
+          <h3>Company Registration (CIPC)</h3>
+          <div class="svc-tag">All Entity Types</div>
+        </div>
+        <div>
+          <p><strong>Pty Ltd registration and amendments</strong>, Close Corporations, Non-Profit Organisations (including churches), Sole Proprietors, Trusts, Estates and Trademarks.</p>
+          <div class="svc-includes">Entity Types</div>
+          <div class="svc-tags chip-row">
+            <span class="chip">Pty Ltd</span>
+            <span class="chip">NPO</span>
+            <span class="chip">Trust</span>
+            <span class="chip">Sole Prop</span>
+            <span class="chip">CC</span>
+            <span class="chip">Trademark</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="svc-row reveal">
+        <i class="fas fa-coins svc-icon"></i>
+        <div class="svc-num">/ 06</div>
+        <div>
+          <h3>Cash Flow &amp; Budgeting</h3>
+          <div class="svc-tag">Forward-Looking</div>
+        </div>
+        <div>
+          <p>Cash-flow forecasting, planning and budgeting — built to your operating cycle so you can <strong>see what is coming before it arrives</strong>.</p>
+          <div class="svc-includes">Includes</div>
+          <div class="svc-tags chip-row">
+            <span class="chip">12-month forecasts</span>
+            <span class="chip">Annual budgets</span>
+            <span class="chip">Working capital</span>
+            <span class="chip">Scenario modelling</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="svc-row reveal">
+        <i class="fas fa-magnifying-glass svc-icon"></i>
+        <div class="svc-num">/ 07</div>
+        <div>
+          <h3>Audit Support</h3>
+          <div class="svc-tag">Engagement Liaison</div>
+        </div>
+        <div>
+          <p>Preparation, working papers and liaison support for external audit engagements — <strong>ensuring an efficient, well-evidenced audit process</strong>.</p>
+          <div class="svc-includes">Includes</div>
+          <div class="svc-tags chip-row">
+            <span class="chip">Working papers</span>
+            <span class="chip">PBC schedules</span>
+            <span class="chip">Auditor liaison</span>
+            <span class="chip">Adjustments</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="svc-row reveal">
+        <i class="fas fa-hand-holding-dollar svc-icon"></i>
+        <div class="svc-num">/ 08</div>
+        <div>
+          <h3>Investments &amp; Credit</h3>
+          <div class="svc-tag">Cash Flow Protection</div>
+        </div>
+        <div>
+          <p>Company investment guidance, legal collections, debtor and credit management to <strong>protect cash flow and reduce write-offs</strong>.</p>
+          <div class="svc-includes">Includes</div>
+          <div class="svc-tags chip-row">
+            <span class="chip">Debtor management</span>
+            <span class="chip">Credit policy</span>
+            <span class="chip">Legal collections</span>
+            <span class="chip">Investment review</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Industries -->
+<section class="industries">
+  <div class="container reveal">
+    <div class="kicker">
+      <span class="line" style="background: var(--gold-soft)"></span>
+      <span class="eyebrow" style="color: var(--gold-soft)">Industries</span>
+    </div>
+    <h2>Every industry. The principle is the same.</h2>
+    <p class="lede">From retail and manufacturing through to professional services, NPOs and trusts — the principles of accurate accounting and timely compliance hold across the board.</p>
+
+    <div class="industries-carousel">
+      <div class="carousel-track">
+        <!-- First set of items -->
+        <div class="industry-tile">Retail &amp; Wholesale</div>
+        <div class="industry-tile">Manufacturing</div>
+        <div class="industry-tile">Professional Services</div>
+        <div class="industry-tile">Construction</div>
+        <div class="industry-tile">Hospitality &amp; Food</div>
+        <div class="industry-tile">Transport &amp; Logistics</div>
+        <div class="industry-tile">Health &amp; Wellness</div>
+        <div class="industry-tile">Beauty &amp; Personal Care</div>
+        <div class="industry-tile">Non-Profit Organisations</div>
+        <div class="industry-tile">Churches &amp; Faith-Based</div>
+        <div class="industry-tile">Trusts &amp; Estates</div>
+        <div class="industry-tile">Sole Proprietors</div>
+        <!-- Duplicate set for infinite scroll -->
+        <div class="industry-tile">Retail &amp; Wholesale</div>
+        <div class="industry-tile">Manufacturing</div>
+        <div class="industry-tile">Professional Services</div>
+        <div class="industry-tile">Construction</div>
+        <div class="industry-tile">Hospitality &amp; Food</div>
+        <div class="industry-tile">Transport &amp; Logistics</div>
+        <div class="industry-tile">Health &amp; Wellness</div>
+        <div class="industry-tile">Beauty &amp; Personal Care</div>
+        <div class="industry-tile">Non-Profit Organisations</div>
+        <div class="industry-tile">Churches &amp; Faith-Based</div>
+        <div class="industry-tile">Trusts &amp; Estates</div>
+        <div class="industry-tile">Sole Proprietors</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Process -->
+<section class="process">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="kicker">
+        <span class="line"></span>
+        <span class="eyebrow">How We Work</span>
+      </div>
+      <h2>From first call to long-term partnership.</h2>
+      <p>A clear, repeatable process — so you know exactly what's happening, what's outstanding, and what's coming next.</p>
+    </div>
+
+    <div class="process-grid reveal">
+      <div class="process-step parallax-element" data-speed="0.05">
+        <div class="pnum">01</div>
+        <h4>Discovery</h4>
+        <p>A free consultation to understand your structure, current status and what's outstanding.</p>
+      </div>
+      <div class="process-step parallax-element" data-speed="0.08">
+        <div class="pnum">02</div>
+        <h4>Diagnostic</h4>
+        <p>A clear picture of where you stand with SARS, CIPC and your books — what to fix, what to file, what to pay.</p>
+      </div>
+      <div class="process-step parallax-element" data-speed="0.06">
+        <div class="pnum">03</div>
+        <h4>Engagement</h4>
+        <p>A scoped engagement letter with deliverables, timelines and pricing — no surprises.</p>
+      </div>
+      <div class="process-step parallax-element" data-speed="0.09">
+        <div class="pnum">04</div>
+        <h4>Ongoing</h4>
+        <p>Monthly bookkeeping, statutory submissions, annual statements — plus the advisory you need as you grow.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-band">
+  <div class="container">
+    <div>
+      <div class="kicker">
+        <span class="line" style="background: var(--gold-soft)"></span>
+        <span class="eyebrow" style="color: var(--gold-soft)">Get Started</span>
+      </div>
+      <h2>Not sure which service fits your stage?</h2>
+      <p>Book a 30-minute consultation and we'll tell you exactly what you need — and what you don't.</p>
+    </div>
+    <div class="actions">
+      <a href="contact.html" class="btn btn-gold">Book Consultation <span class="arr">→</span></a>
+      <a href="tax-compliance.html" class="btn btn-ghost">Tax &amp; Compliance <span class="arr">→</span></a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-logo">
+          <img src="https://res.cloudinary.com/dgwtaivvf/image/upload/v1778057889/Wordmark-CA_v1gxqy.png" alt="Ceddy Accountants" style="width: 200px; height: auto; margin-bottom: 16px;">
+        </div>
+        <p class="footer-blurb">A South African accounting firm helping individuals, startups and SMEs stay compliant, organised and ready for growth.</p>
+      </div>
+      <div class="footer-col"><h5>Explore</h5><ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="tax-compliance.html">Tax &amp; Compliance</a></li>
+        <li><a href="leadership.html">Leadership</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul></div>
+      <div class="footer-col"><h5>Services</h5><ul>
+        <li><a href="services.html">Bookkeeping</a></li>
+        <li><a href="services.html">Financial Statements</a></li>
+        <li><a href="tax-compliance.html">Tax Returns</a></li>
+        <li><a href="services.html">CIPC Registration</a></li>
+        <li><a href="services.html">Payroll</a></li>
+        <li><a href="services.html">Audit Support</a></li>
+      </ul></div>
+      <div class="footer-col"><h5>Contact</h5><ul>
+        <li>Boksburg, Gauteng, 1459</li>
+        <li><a href="mailto:ceddymokhudu@gmail.com">ceddymokhudu@gmail.com</a></li>
+        <li><a href="tel:+27787056079">+27 78 705 6079</a></li>
+        <li><a href="tel:+27729083555">+27 72 908 3555</a></li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Ceddy Accountants (Pty) Ltd · Reg. 2020/643822/07</span>
+      <span>SAIPA Member · SARS Tax Practitioner · CIPC Authorised Filer</span>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

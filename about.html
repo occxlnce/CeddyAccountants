@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — Ceddy Accountants</title>
+<meta name="description" content="Founded in 2020 in Ekurhuleni, Gauteng. SAIPA-registered. Mission, vision and objectives of Ceddy Accountants.">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" type="image/png" href="https://res.cloudinary.com/dgwtaivvf/image/upload/v1778057865/Symbol-CA_kmvjfh.png">
+<style>
+/* About-specific styles */
+.about-grid {
+  display: grid;
+  gap: 80px;
+  margin-bottom: 80px;
+}
+@media (min-width: 900px) {
+  .about-grid { grid-template-columns: 1fr 1fr; }
+}
+
+/* Glassmorphism cards */
+.what-we-do-grid {
+  display: grid;
+  gap: 24px;
+  margin-top: 40px;
+}
+.what-we-do-item {
+  background: rgba(255,255,255,0.8);
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 16px;
+  padding: 32px;
+  transition: all .4s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(20px);
+  box-shadow: var(--shadow-sm);
+}
+.what-we-do-item:hover {
+  background: rgba(255,255,255,0.95);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--muted-gold);
+}
+
+.why-exist-visual {
+  background: rgba(255,255,255,0.8);
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 16px;
+  padding: 48px;
+  text-align: center;
+  backdrop-filter: blur(20px);
+  box-shadow: var(--shadow-sm);
+}
+
+.mission-vision-grid {
+  display: grid;
+  gap: 32px;
+  margin-top: 48px;
+}
+.mission-vision-item {
+  background: rgba(255,255,255,0.8);
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 16px;
+  padding: 40px;
+  transition: all .4s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(20px);
+  box-shadow: var(--shadow-sm);
+}
+.mission-vision-item:hover {
+  background: rgba(255,255,255,0.95);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.about-grid .label {
+  font-size: 11px; letter-spacing: 0.32em; text-transform: uppercase;
+  color: var(--muted-gold); font-weight: 600;
+}
+.about-grid h2 { margin-top: 22px; }
+.about-grid p {
+  font-size: 17px; line-height: 1.8; color: var(--slate-blue);
+}
+.about-grid p strong { color: var(--midnight-teal); font-weight: 500; }
+
+/* MVO blocks */
+.mvo {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1px;
+  background: var(--rule);
+  border: 1px solid var(--rule);
+  margin-top: 60px;
+}
+@media (min-width: 900px) { .mvo { grid-template-columns: repeat(3, 1fr); } }
+
+.mvo-block {
+  padding: 50px 40px;
+  position: relative;
+}
+.mvo-block:nth-child(1) { background: var(--midnight-teal); color: var(--paper); }
+.mvo-block:nth-child(2) { background: var(--paper); color: var(--midnight-teal); }
+.mvo-block:nth-child(3) { background: var(--muted-gold); color: var(--midnight-teal); }
+.mvo-block .mvo-num {
+  font-family: var(--serif);
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  opacity: 0.7;
+}
+.mvo-block:nth-child(1) .mvo-num { color: var(--gold-soft); opacity: 1; }
+.mvo-block h3 {
+  margin: 16px 0 22px;
+  font-family: var(--serif);
+  font-size: 36px;
+  line-height: 1;
+}
+.mvo-block:nth-child(1) h3 { color: var(--paper); }
+.mvo-block p {
+  font-size: 15px;
+  line-height: 1.75;
+  margin: 0;
+}
+.mvo-block:nth-child(1) p { color: rgba(242,242,242,0.85); }
+.mvo-block:nth-child(2) p { color: var(--slate-blue); }
+
+/* MVO Card Color Swap on Hover */
+.mvo-block {
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Mission card (1st) swaps with Vision card (2nd) */
+.mvo-block:nth-child(1):hover {
+  background: var(--paper);
+  color: var(--midnight-teal);
+}
+.mvo-block:nth-child(1):hover .mvo-num {
+  color: var(--muted-gold);
+  opacity: 0.7;
+}
+.mvo-block:nth-child(1):hover h3 {
+  color: var(--midnight-teal);
+}
+.mvo-block:nth-child(1):hover p {
+  color: var(--slate-blue);
+}
+
+/* Vision card (2nd) swaps with Objectives card (3rd) */
+.mvo-block:nth-child(2):hover {
+  background: var(--muted-gold);
+  color: var(--midnight-teal);
+}
+.mvo-block:nth-child(2):hover .mvo-num {
+  color: var(--gold-soft);
+  opacity: 0.7;
+}
+.mvo-block:nth-child(2):hover h3 {
+  color: var(--midnight-teal);
+}
+.mvo-block:nth-child(2):hover p {
+  color: var(--slate-blue);
+}
+
+/* Objectives card (3rd) swaps with Mission card (1st) */
+.mvo-block:nth-child(3):hover {
+  background: var(--midnight-teal);
+  color: var(--paper);
+}
+.mvo-block:nth-child(3):hover .mvo-num {
+  color: var(--gold-soft);
+  opacity: 1;
+}
+.mvo-block:nth-child(3):hover h3 {
+  color: var(--paper);
+}
+.mvo-block:nth-child(3):hover p {
+  color: rgba(242,242,242,0.85);
+}
+
+/* Why we exist */
+.why-section { background: #ffffff; }
+.why-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 60px;
+  align-items: center;
+}
+@media (min-width: 900px) { .why-grid { grid-template-columns: 1fr 1fr; gap: 90px; } }
+
+.why-visual {
+  background: var(--midnight-teal);
+  padding: 60px 50px;
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 5/4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.why-visual::before {
+  content: "CA";
+  position: absolute;
+  font-family: var(--serif);
+  font-size: 480px;
+  line-height: 1;
+  color: rgba(175,134,74,0.06);
+  letter-spacing: -0.04em;
+}
+.why-visual .stamp {
+  position: relative;
+  z-index: 2;
+  width: 220px; height: 220px;
+  border-radius: 50%;
+  border: 1px solid rgba(175,134,74,0.4);
+  display: grid;
+  place-items: center;
+  color: var(--paper);
+}
+.why-visual .stamp::before {
+  content: "";
+  position: absolute;
+  inset: 12px;
+  border-radius: 50%;
+  border: 1px solid rgba(175,134,74,0.25);
+}
+.why-visual .stamp-content {
+  text-align: center;
+}
+.why-visual .stamp-content .y {
+  font-family: var(--serif);
+  font-size: 60px;
+  line-height: 1;
+  color: var(--gold-soft);
+}
+.why-visual .stamp-content .l {
+  margin-top: 6px;
+  font-size: 10px;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: rgba(242,242,242,0.7);
+}
+
+.why-content h2 { margin-top: 22px; }
+.why-content p { font-size: 17px; line-height: 1.8; color: var(--slate-blue); }
+.why-content p strong { color: var(--midnight-teal); font-weight: 500; }
+
+/* What we do — list */
+.wwd {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.wwd-item {
+  padding: 18px 22px;
+  background: rgba(19,56,79,0.04);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--midnight-teal);
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-inner">
+    <a href="index.html" class="brand"><div class="brand-mark" style="background: url('https://res.cloudinary.com/dgwtaivvf/image/upload/v1778057865/Symbol-CA_kmvjfh.png') center/contain; background-repeat: no-repeat; width: 40px; height: 40px;"></div></a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="tax-compliance.html">Tax &amp; Compliance</a>
+      <a href="leadership.html">Leadership</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a href="contact.html" class="nav-cta">Book Consultation <span class="arr">→</span></a>
+    <button class="nav-toggle"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="page-hero" style="background: #13384f73 url('https://res.cloudinary.com/dgwtaivvf/image/upload/v1778057872/CA_Envelope_ud6qdv.png') center/cover; color: var(--midnight-teal);">
+  <div class="container">
+    <div class="page-hero-grid">
+      <div>
+        <div class="kicker">
+          <span class="eyebrow" style="color: var(--gold-soft)">About the Firm</span>
+        </div>
+        <h1>An accounting practice<br>built on standards.</h1>
+        <p class="lede">Founded in 2020 in Ekurhuleni, Gauteng — Ceddy Accountants is a South African accounting firm partnering with individuals, startups and SMEs to keep finances current and fully compliant with SARS and regulatory requirements.</p>
+      </div>
+      <div class="page-hero-meta">
+        At a glance
+        <span style="margin-top:14px;">FOUNDED · 2020</span>
+        <span>HQ · BOKSBURG, GAUTENG</span>
+        <span>AFFILIATION · SAIPA</span>
+        <span>REG · 2020/643822/07</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INTRODUCTION -->
+<section>
+  <div class="container">
+    <div class="about-grid reveal">
+      <div>
+        <span class="label">Introduction</span>
+        <h2>Born from a simple observation about compliance.</h2>
+      </div>
+      <div>
+        <p>
+          <strong>Ceddy Accountants (Pty) Ltd</strong> is a South African accounting firm founded in 2020 in the City of Ekurhuleni, Gauteng Province. Established by a qualified Professional Accountant, the firm partners with individuals, startups and small-to-medium enterprises to keep their finances current and fully compliant with South African tax and regulatory requirements.
+        </p>
+        <p>
+          We were born from a simple observation: too many businesses register and then drift out of compliance — often unaware of the obligations that follow. Our work is to close that gap with reliable bookkeeping, accurate financial reporting and timely tax submissions, so our clients can focus on building their businesses.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT WE DO -->
+<section style="background: var(--paper); padding-top: 0;">
+  <div class="container">
+    <div class="about-grid reveal" style="padding-top: 100px;">
+      <div>
+        <span class="label">What We Do</span>
+        <h2>End-to-end financial support, tailored to your stage.</h2>
+        <p style="margin-top: 24px;">Whether you are a sole proprietor, a registered company, a non-profit organisation or a trust — services are tailored to your structure and grounded in the standards of the South African Institute of Professional Accountants (SAIPA).</p>
+      </div>
+      <div>
+        <div class="wwd">
+          <div class="wwd-item">Bookkeeping</div>
+          <div class="wwd-item">Financial Statements</div>
+          <div class="wwd-item">Tax Submissions</div>
+          <div class="wwd-item">Payroll Services</div>
+          <div class="wwd-item">CIPC Registrations</div>
+          <div class="wwd-item">Audit Support</div>
+          <div class="wwd-item">Cash Flow &amp; Budgeting</div>
+          <div class="wwd-item">Business Advisory</div>
+        </div>
+        <a href="services.html" class="btn btn-outline" style="margin-top: 28px;">View All Services <span class="arr">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY WE EXIST -->
+<section class="why-section">
+  <div class="container">
+    <div class="why-grid reveal">
+      <div class="why-visual parallax-element" data-speed="0.1" style="background: url('https://res.cloudinary.com/dgwtaivvf/image/upload/v1778057856/Business_Card_Mockup1_a5j8hy.png') center/cover;">
+              </div>
+      <div class="why-content">
+        <div class="kicker">
+          <span class="eyebrow">Why We Exist</span>
+        </div>
+        <h2>To close the compliance gap.</h2>
+        <p>
+          Many businesses fail to stay compliant after registration — penalties accrue, tax clearance lapses, banking gets restricted, and tenders go to better-prepared competitors.
+        </p>
+        <p>
+          <strong>Our role is to make sure that doesn't happen to you.</strong> We keep clients fully compliant with SARS, CIPC and statutory bodies — and financially structured for the next step, whatever it is.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MISSION VISION OBJECTIVES -->
+<section>
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="kicker">
+          <span class="eyebrow">Direction</span>
+        </div>
+      <h2>Mission, Vision &amp; Objectives</h2>
+      <p>The firm runs on three plain commitments — to clients, to standards, and to the next generation of South African accountants.</p>
+    </div>
+
+    <div class="mvo reveal">
+      <div class="mvo-block">
+        <div class="mvo-num">/ Mission</div>
+        <h3>Consistent quality, on time, every time.</h3>
+        <p>To be the leading accounting practice known for the consistent quality of service we deliver to every client we are trusted with — providing the very best of our craft, on time, every time.</p>
+      </div>
+      <div class="mvo-block">
+        <div class="mvo-num">/ Vision</div>
+        <h3>Accurate reporting, fully compliant — always.</h3>
+        <p>To deliver excellent, accurate financial reporting alongside a dedicated team that honours and respects our clients — keeping them fully compliant, all of the time.</p>
+      </div>
+      <div class="mvo-block">
+        <div class="mvo-num">/ Objectives</div>
+        <h3>Local growth, graduate empowerment, sustained competitiveness.</h3>
+        <p>To create sustainable opportunities for the local community, support finance graduates with skills and experience that prepare them for the corporate world, and remain competitive across every service we render.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-band">
+  <div class="container">
+    <div>
+      <div class="kicker">
+        <span class="eyebrow" style="color: var(--gold-soft)">Get Started</span>
+      </div>
+      <h2>Let's get your business compliant — and growing.</h2>
+      <p>A short consultation is the fastest way to know exactly where you stand.</p>
+    </div>
+    <div class="actions">
+      <a href="contact.html" class="btn btn-gold">Book Consultation <span class="arr">→</span></a>
+      <a href="services.html" class="btn btn-ghost">View Services <span class="arr">→</span></a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-logo">
+          <img src="https://res.cloudinary.com/dgwtaivvf/image/upload/v1778057889/Wordmark-CA_v1gxqy.png" alt="Ceddy Accountants" style="width: 200px; height: auto; margin-bottom: 16px;">
+        </div>
+        <p class="footer-blurb">A South African accounting firm helping individuals, startups and SMEs stay compliant, organised and ready for growth.</p>
+      </div>
+      <div class="footer-col"><h5>Explore</h5><ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="tax-compliance.html">Tax &amp; Compliance</a></li>
+        <li><a href="leadership.html">Leadership</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul></div>
+      <div class="footer-col"><h5>Services</h5><ul>
+        <li><a href="services.html">Bookkeeping</a></li>
+        <li><a href="services.html">Financial Statements</a></li>
+        <li><a href="tax-compliance.html">Tax Returns</a></li>
+        <li><a href="services.html">CIPC Registration</a></li>
+        <li><a href="services.html">Payroll</a></li>
+        <li><a href="services.html">Audit Support</a></li>
+      </ul></div>
+      <div class="footer-col"><h5>Contact</h5><ul>
+        <li>Boksburg, Gauteng, 1459</li>
+        <li><a href="mailto:ceddymokhudu@gmail.com">ceddymokhudu@gmail.com</a></li>
+        <li><a href="tel:+27787056079">+27 78 705 6079</a></li>
+        <li><a href="tel:+27729083555">+27 72 908 3555</a></li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Ceddy Accountants (Pty) Ltd · Reg. 2020/643822/07</span>
+      <span>SAIPA Member · SARS Tax Practitioner · CIPC Authorised Filer</span>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

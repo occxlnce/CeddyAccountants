@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leadership — Ceddy Accountants</title>
+<meta name="description" content="Ceddy Mokhudu Chula — Founder &amp; Director, Professional Accountant (SA), SAIPA-registered Tax Practitioner.">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" type="image/png" href="https://res.cloudinary.com/dgwtaivvf/image/upload/v1778057865/Symbol-CA_kmvjfh.png">
+<style>
+.leader-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 50px;
+  align-items: start;
+}
+@media (min-width: 900px) { .leader-grid { grid-template-columns: 1fr 1.4fr; gap: 80px; } }
+
+.leader-portrait {
+  position: relative;
+  background: rgba(19, 56, 79, 0.9);
+  aspect-ratio: 4/5;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  padding: 40px;
+  border-radius: 16px;
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.1);
+  box-shadow: var(--shadow-lg);
+}
+.leader-portrait::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 30% 80%, rgba(175,134,74,0.28), transparent 60%),
+    radial-gradient(ellipse at 70% 15%, rgba(67,105,128,0.45), transparent 65%);
+}
+.leader-portrait::after {
+  content: "CA";
+  position: absolute;
+  top: 32px; left: 40px;
+  font-family: var(--serif);
+  font-size: 72px;
+  color: rgba(175,134,74,0.22);
+  line-height: 1;
+}
+.leader-portrait .stamp {
+  position: relative;
+  z-index: 2;
+  color: var(--paper);
+}
+.leader-portrait .stamp .role {
+  font-size: 11px;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--gold-soft);
+}
+.leader-portrait .stamp .name {
+  margin-top: 14px;
+  font-family: var(--serif);
+  font-size: clamp(36px, 5vw, 48px);
+  line-height: 1;
+}
+.leader-portrait .stamp .designation {
+  margin-top: 14px;
+  font-size: 13px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(242,242,242,0.7);
+}
+
+.leader-content .lead-eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--muted-gold);
+  font-weight: 600;
+}
+.leader-content h2 { margin-top: 18px; }
+.leader-content p {
+  font-size: 17px;
+  line-height: 1.85;
+  color: var(--slate-blue);
+  margin-top: 24px;
+}
+.leader-content p strong { color: var(--midnight-teal); font-weight: 500; }
+
+.lead-pull {
+  margin-top: 36px;
+  padding: 32px;
+  background: rgba(255,255,255,0.8);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 16px;
+  font-family: var(--serif);
+  font-size: 22px;
+  line-height: 1.4;
+  color: var(--midnight-teal);
+  box-shadow: var(--shadow-sm);
+  transition: all .3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.lead-pull:hover {
+  background: rgba(255,255,255,0.95);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Credentials row */
+.creds {
+  background: rgba(255,255,255,0.4);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 16px;
+  overflow: hidden;
+}
+.creds-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1px;
+  background: var(--rule);
+}
+@media (min-width: 700px) { .creds-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1000px) { .creds-grid { grid-template-columns: repeat(4, 1fr); } }
+
+.cred-cell {
+  background: rgba(255,255,255,0.8);
+  backdrop-filter: blur(20px);
+  padding: 50px 36px;
+  text-align: left;
+  transition: all .3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.cred-cell:hover {
+  background: rgba(255,255,255,0.95);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+.cred-cell .cred-num {
+  font-family: var(--serif);
+  font-size: 14px;
+  color: var(--muted-gold);
+}
+.cred-cell .cred-mark {
+  margin-top: 18px;
+  font-family: var(--serif);
+  font-size: 36px;
+  line-height: 1;
+  color: var(--midnight-teal);
+}
+.cred-cell h4 {
+  margin: 14px 0 10px;
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--slate-blue);
+}
+.cred-cell p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--slate-blue);
+  margin: 0;
+}
+
+/* Approach */
+.approach { 
+  background: rgba(255,255,255,0.4);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 16px;
+  overflow: hidden;
+}
+.approach-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 50px;
+}
+@media (min-width: 900px) { .approach-grid { grid-template-columns: 1fr 1fr; gap: 80px; } }
+
+.approach-content h2 { margin-top: 22px; }
+.approach-content p {
+  font-size: 17px;
+  line-height: 1.8;
+  color: var(--slate-blue);
+  margin-top: 22px;
+}
+
+.approach-list {
+  display: grid;
+  gap: 18px;
+}
+.approach-item {
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  gap: 24px;
+  padding: 26px;
+  background: #ffffff;
+  border: 1px solid var(--rule);
+  align-items: start;
+  transition: border-color .35s ease, transform .35s ease;
+}
+.approach-item:hover {
+  border-color: var(--gold-soft);
+  transform: translateX(4px);
+}
+.approach-item .pn {
+  font-family: var(--serif);
+  font-size: 32px;
+  line-height: 1;
+  color: var(--gold-soft);
+}
+.approach-item h4 {
+  font-family: var(--serif);
+  font-size: 22px;
+  color: var(--midnight-teal);
+  margin: 0 0 8px;
+}
+.approach-item p {
+  font-size: 14px;
+  color: var(--slate-blue);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Affiliations */
+.affil-band { background: var(--midnight-teal); color: var(--paper); }
+.affil-band .container { position: relative; z-index: 2; }
+.affil-band h2 { color: var(--paper); }
+.affil-band .lede {
+  margin-top: 24px;
+  max-width: 700px;
+  font-size: 17px;
+  line-height: 1.75;
+  color: rgba(242,242,242,0.78);
+}
+.docs-list {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+@media (min-width: 700px) { .docs-list { grid-template-columns: 1fr 1fr; } }
+.doc-item {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 18px 22px;
+  border: 1px solid rgba(255,255,255,0.14);
+  background: rgba(255,255,255,0.04);
+}
+.doc-item .doc-num {
+  font-family: var(--serif);
+  font-size: 14px;
+  color: var(--gold-soft);
+}
+.doc-item .doc-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--paper);
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-inner">
+    <a href="index.html" class="brand"><div class="brand-mark" style="background: url('https://res.cloudinary.com/dgwtaivvf/image/upload/v1778057865/Symbol-CA_kmvjfh.png') center/contain; background-repeat: no-repeat; width: 40px; height: 40px;"></div></a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="tax-compliance.html">Tax &amp; Compliance</a>
+      <a href="leadership.html">Leadership</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a href="contact.html" class="nav-cta">Book Consultation <span class="arr">→</span></a>
+    <button class="nav-toggle"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+
+<section class="page-hero" style="background: #13384f73 url('https://res.cloudinary.com/dgwtaivvf/image/upload/v1778057874/Business_Card_Mockup2_qfz1un.png') center/cover; color: var(--midnight-teal);">
+  <div class="container">
+    <div class="page-hero-grid">
+      <div>
+        <div class="kicker">
+          <span class="line"></span>
+          <span class="eyebrow" style="color: var(--gold-soft)">Leadership</span>
+        </div>
+        <h1>Led directly by<br>the founder.</h1>
+        <p class="lede">As a solo director, every engagement is handled directly by Ceddy — drawing on in-house corporate experience and SAIPA-grade standards to build a practice clients can rely on.</p>
+      </div>
+      <div class="page-hero-meta">
+        Founder &amp; Director
+        <span style="margin-top:14px;">CEDDY MOKHUDU CHULA</span>
+        <span>PROFESSIONAL ACCOUNTANT (SA)</span>
+        <span>SAIPA · SARS · CIPC</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Founder profile -->
+<section>
+  <div class="container">
+    <div class="leader-grid reveal">
+      <div class="leader-portrait" style="background: url('https://res.cloudinary.com/dgwtaivvf/image/upload/v1778057903/Director_Closeup_abbx0l.png') center/cover; position: relative;">
+        <div class="stamp">
+          <div class="role">Founder &amp; Director</div>
+          <div class="name">Ceddy<br>Mokhudu<br>Chula</div>
+          <div class="designation">Professional Accountant (SA)</div>
+        </div>
+      </div>
+      <div class="leader-content">
+        <span class="lead-eyebrow">The Practice Lead</span>
+        <h2>The standard the firm runs on, set by the person who runs the firm.</h2>
+        <p>
+          Ceddy is a qualified <strong>Professional Accountant (SA)</strong> and registered Tax Practitioner under the South African Institute of Professional Accountants (SAIPA). She founded Ceddy Accountants in 2020, drawing on her in-house corporate experience to build a practice that meets the standard she expected from her own employers.
+        </p>
+        <p>
+          Her work spans bookkeeping, the compilation of financial statements and the full spectrum of tax submissions for both individuals and companies. <strong>As a solo director, every engagement is led by her directly.</strong>
+        </p>
+
+        <div class="lead-pull">
+          “Many businesses register and then drift out of compliance. Our work is to close that gap — quietly, reliably, on time.”
+        </div>
+
+        <div style="margin-top: 32px; display: flex; gap: 14px; flex-wrap: wrap;">
+          <a href="contact.html" class="btn btn-primary">Book a Consultation <span class="arr">→</span></a>
+          <a href="about.html" class="btn btn-outline">About the Firm <span class="arr">→</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Credentials -->
+<section class="creds">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="kicker">
+        <span class="line"></span>
+        <span class="eyebrow">Credentials</span>
+      </div>
+      <h2>Registered, accredited, authorised.</h2>
+      <p>The certifications behind every engagement — current, in good standing, and continually maintained through professional development.</p>
+    </div>
+
+    <div class="creds-grid reveal">
+      <div class="cred-cell">
+        <div class="cred-num">/ 01</div>
+        <div class="cred-mark">SAIPA</div>
+        <h4>Member</h4>
+        <p>South African Institute of Professional Accountants — Professional Accountant (SA) designation.</p>
+      </div>
+      <div class="cred-cell">
+        <div class="cred-num">/ 02</div>
+        <div class="cred-mark">SARS</div>
+        <h4>Registered Tax Practitioner</h4>
+        <p>Registered Tax Practitioner with the South African Revenue Service for company and individual filings.</p>
+      </div>
+      <div class="cred-cell">
+        <div class="cred-num">/ 03</div>
+        <div class="cred-mark">CIPC</div>
+        <h4>Authorised Filer</h4>
+        <p>Authorised filer with the Companies and Intellectual Property Commission for registrations and amendments.</p>
+      </div>
+      <div class="cred-cell">
+        <div class="cred-num">/ 04</div>
+        <div class="cred-mark">Pastel</div>
+        <h4>Certified Bookkeeping</h4>
+        <p>Pastel-certified, with full bookkeeping setup, configuration and run capability.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Approach -->
+<section class="approach">
+  <div class="container">
+    <div class="approach-grid reveal">
+      <div class="approach-content">
+        <div class="kicker">
+          <span class="line"></span>
+          <span class="eyebrow">The Approach</span>
+        </div>
+        <h2>What it means to be a client.</h2>
+        <p>Working with Ceddy Accountants means working directly with the founder — every meeting, every review, every submission. Below is what to expect.</p>
+      </div>
+
+      <div class="approach-list">
+        <div class="approach-item">
+          <div class="pn">01</div>
+          <div>
+            <h4>Direct access, every time</h4>
+            <p>You speak with the person doing the work. No layered hand-offs, no junior reassignments mid-engagement.</p>
+          </div>
+        </div>
+        <div class="approach-item">
+          <div class="pn">02</div>
+          <div>
+            <h4>SAIPA-grade standards</h4>
+            <p>Every workpaper, statement and submission is held to the institute's standards — not internal shortcuts.</p>
+          </div>
+        </div>
+        <div class="approach-item">
+          <div class="pn">03</div>
+          <div>
+            <h4>Plain language</h4>
+            <p>Tax and accounting jargon translated into decisions you can actually act on — without dumbing down the work.</p>
+          </div>
+        </div>
+        <div class="approach-item">
+          <div class="pn">04</div>
+          <div>
+            <h4>Long-term focus</h4>
+            <p>Every client is onboarded with the next three years in mind, not just the next deadline.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Affiliations & Documents -->
+<section class="affil-band">
+  <div class="container reveal">
+    <div class="kicker">
+      <span class="line" style="background: var(--gold-soft)"></span>
+      <span class="eyebrow" style="color: var(--gold-soft)">Affiliations &amp; Documents</span>
+    </div>
+    <h2>SAIPA-affiliated. Documents on file, available on request.</h2>
+    <p class="lede">Affiliation with the South African Institute of Professional Accountants keeps the practice at the leading edge of professional accountancy — through continuous professional development and timely updates to the regulatory framework, knowledge that flows directly into client work.</p>
+
+    <div class="docs-list">
+      <div class="doc-item"><div class="doc-num">/ 01</div><div class="doc-name">Qualification Certificate</div></div>
+      <div class="doc-item"><div class="doc-num">/ 02</div><div class="doc-name">Tax Clearance Certificate</div></div>
+      <div class="doc-item"><div class="doc-num">/ 03</div><div class="doc-name">Identity Document</div></div>
+      <div class="doc-item"><div class="doc-num">/ 04</div><div class="doc-name">Business Registration Certificate</div></div>
+      <div class="doc-item"><div class="doc-num">/ 05</div><div class="doc-name">BBBEE Certificate</div></div>
+      <div class="doc-item"><div class="doc-num">/ 06</div><div class="doc-name">Bank Confirmation Letter</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-band">
+  <div class="container">
+    <div>
+      <div class="kicker">
+        <span class="line" style="background: var(--gold-soft)"></span>
+        <span class="eyebrow" style="color: var(--gold-soft)">Get Started</span>
+      </div>
+      <h2>Speak directly with the founder.</h2>
+      <p>30-minute consultation, no obligation. We'll tell you exactly where you stand and what's needed.</p>
+    </div>
+    <div class="actions">
+      <a href="contact.html" class="btn btn-gold">Book Consultation <span class="arr">→</span></a>
+      <a href="tel:+27787056079" class="btn btn-ghost">Call +27 78 705 6079</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-logo">
+          <img src="https://res.cloudinary.com/dgwtaivvf/image/upload/v1778057889/Wordmark-CA_v1gxqy.png" alt="Ceddy Accountants" style="width: 200px; height: auto; margin-bottom: 16px;">
+        </div>
+        <p class="footer-blurb">A South African accounting firm helping individuals, startups and SMEs stay compliant, organised and ready for growth.</p>
+      </div>
+      <div class="footer-col"><h5>Explore</h5><ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="tax-compliance.html">Tax &amp; Compliance</a></li>
+        <li><a href="leadership.html">Leadership</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul></div>
+      <div class="footer-col"><h5>Services</h5><ul>
+        <li><a href="services.html">Bookkeeping</a></li>
+        <li><a href="services.html">Financial Statements</a></li>
+        <li><a href="tax-compliance.html">Tax Returns</a></li>
+        <li><a href="services.html">CIPC Registration</a></li>
+        <li><a href="services.html">Payroll</a></li>
+        <li><a href="services.html">Audit Support</a></li>
+      </ul></div>
+      <div class="footer-col"><h5>Contact</h5><ul>
+        <li>Boksburg, Gauteng, 1459</li>
+        <li><a href="mailto:ceddymokhudu@gmail.com">ceddymokhudu@gmail.com</a></li>
+        <li><a href="tel:+27787056079">+27 78 705 6079</a></li>
+        <li><a href="tel:+27729083555">+27 72 908 3555</a></li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Ceddy Accountants (Pty) Ltd · Reg. 2020/643822/07</span>
+      <span>SAIPA Member · SARS Tax Practitioner · CIPC Authorised Filer</span>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
