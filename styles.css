@@ -506,6 +506,20 @@ section { padding: clamp(80px, 10vw, 140px) 0; }
   .nav-links, .nav-cta { display: none; }
   .leader-portrait { display: none; }
   .leader-content { width: 100%; }
+  
+  /* Fix mobile hero background images */
+  .page-hero {
+    background-size: cover !important;
+    background-position: center center !important;
+    background-attachment: scroll !important;
+  }
+  
+  /* Fix mobile navigation scrolling */
+  .nav-links.open {
+    overflow-y: auto !important;
+    height: calc(100vh - 88px) !important;
+    padding-bottom: 40px !important;
+  }
 }
 
 /* Leadership page specific mobile optimization */
@@ -525,6 +539,20 @@ section { padding: clamp(80px, 10vw, 140px) 0; }
   .accordion-icon { width: 44px; height: 44px; }
   .leader-portrait { display: none; }
   .leader-content { width: 100%; }
+  
+  /* Fix mobile hero background images */
+  .page-hero {
+    background-size: cover !important;
+    background-position: center center !important;
+    background-attachment: scroll !important;
+  }
+  
+  /* Fix mobile navigation scrolling */
+  .nav-links.open {
+    overflow-y: auto !important;
+    height: calc(100vh - 88px) !important;
+    padding-bottom: 40px !important;
+  }
 }
 
 /* Small Tablets (415-768px) */
@@ -537,6 +565,20 @@ section { padding: clamp(80px, 10vw, 140px) 0; }
   .about-grid { grid-template-columns: 1fr; gap: 60px; }
   .leader-portrait { display: none; }
   .leader-content { width: 100%; }
+  
+  /* Fix mobile hero background images */
+  .page-hero {
+    background-size: cover !important;
+    background-position: center center !important;
+    background-attachment: scroll !important;
+  }
+  
+  /* Fix mobile navigation scrolling */
+  .nav-links.open {
+    overflow-y: auto !important;
+    height: calc(100vh - 88px) !important;
+    padding-bottom: 40px !important;
+  }
 }
 
 /* Tablets (769-1024px) */
