@@ -119,6 +119,19 @@
   align-items: center;
   padding: 140px 0 80px;
 }
+@media (max-width: 480px) {
+  .home-hero {
+    min-height: auto;
+    padding: 100px 0 50px;
+    background-size: cover;
+    background-position: center top;
+  }
+}
+@media (min-width: 481px) and (max-width: 768px) {
+  .home-hero {
+    padding: 120px 0 60px;
+  }
+}
 .home-hero::before {
   content: "";
   position: absolute;
@@ -142,6 +155,9 @@
   gap: 50px;
   align-items: center;
 }
+@media (max-width: 480px) {
+  .home-hero-grid { gap: 30px; }
+}
 @media (min-width: 1000px) {
   .home-hero-grid { grid-template-columns: 1.35fr 1fr; gap: 80px; }
 }
@@ -157,6 +173,9 @@
   color: var(--gold-soft);
   margin-bottom: 32px;
 }
+@media (max-width: 480px) {
+  .hero-eyebrow { margin-bottom: 20px; }
+}
 .hero-eyebrow .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--muted-gold); }
 .hero-eyebrow .line { width: 36px; height: 1px; background: var(--gold-soft); }
 
@@ -166,6 +185,9 @@
   font-size: clamp(44px, 6.5vw, 92px);
   line-height: 0.98;
   margin: 0;
+}
+@media (max-width: 480px) {
+  .home-hero h1 { font-size: clamp(32px, 8vw, 44px); line-height: 1.05; }
 }
 .home-hero h1 em {
   font-style: italic;
@@ -179,11 +201,17 @@
   color: rgba(242,242,242,0.78);
   max-width: 560px;
 }
+@media (max-width: 480px) {
+  .home-hero .lede { font-size: 15px; margin-top: 20px; }
+}
 .home-hero .actions {
   margin-top: 40px;
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
+}
+@media (max-width: 480px) {
+  .home-hero .actions { margin-top: 28px; gap: 12px; }
 }
 .home-hero .meta {
   margin-top: 60px;
@@ -193,6 +221,10 @@
   max-width: 540px;
   border-top: 1px solid rgba(255,255,255,0.14);
   padding-top: 28px;
+}
+@media (max-width: 480px) {
+  .home-hero .meta { margin-top: 40px; gap: 14px; padding-top: 20px; }
+  .home-hero .meta div span:first-child { font-size: 24px; }
 }
 .home-hero .meta div span:first-child {
   font-family: var(--serif);
@@ -218,6 +250,11 @@
   border: 1px solid rgba(255,255,255,0.12);
   backdrop-filter: blur(10px);
   border-radius: 4px;
+}
+@media (max-width: 480px) {
+  .hero-card { padding: 28px 24px; }
+  .hero-card .quote { font-size: 20px; margin: 20px 0; }
+  .hero-card::before { font-size: 160px; top: -5px; right: -5px; }
 }
 .hero-card::before {
   content: "CA";

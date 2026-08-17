@@ -514,6 +514,21 @@ section { padding: clamp(80px, 10vw, 140px) 0; }
     background-attachment: scroll !important;
   }
   
+  /* Fix home hero on mobile */
+  .home-hero {
+    min-height: auto !important;
+    padding: 100px 0 50px !important;
+    background-size: cover !important;
+    background-position: center top !important;
+    background-attachment: scroll !important;
+  }
+  .home-hero h1 { font-size: 32px !important; line-height: 1.1 !important; }
+  .home-hero .lede { font-size: 15px !important; margin-top: 16px !important; }
+  .home-hero .meta { margin-top: 30px !important; gap: 12px !important; }
+  .home-hero .meta div span:first-child { font-size: 22px !important; }
+  .hero-card { padding: 24px 20px !important; }
+  .hero-card .quote { font-size: 18px !important; margin: 16px 0 !important; }
+  
   /* Fix mobile navigation scrolling */
   .nav-links.open {
     overflow-y: auto !important;
@@ -528,7 +543,7 @@ section { padding: clamp(80px, 10vw, 140px) 0; }
   .leadership .leader-content { width: 100%; }
 }
 
-/* iPhone 11/12 (390x844) */
+/* iPhone 11/12/14/16 (376-414px) */
 @media (min-width: 376px) and (max-width: 414px) {
   .container { padding: 0 24px; }
   h1 { font-size: 36px; }
@@ -546,6 +561,21 @@ section { padding: clamp(80px, 10vw, 140px) 0; }
     background-position: center center !important;
     background-attachment: scroll !important;
   }
+  
+  /* Fix home hero on mobile */
+  .home-hero {
+    min-height: auto !important;
+    padding: 110px 0 55px !important;
+    background-size: cover !important;
+    background-position: center top !important;
+    background-attachment: scroll !important;
+  }
+  .home-hero h1 { font-size: 36px !important; line-height: 1.05 !important; }
+  .home-hero .lede { font-size: 15px !important; margin-top: 18px !important; }
+  .home-hero .meta { margin-top: 35px !important; gap: 14px !important; }
+  .home-hero .meta div span:first-child { font-size: 24px !important; }
+  .hero-card { padding: 28px 22px !important; }
+  .hero-card .quote { font-size: 20px !important; margin: 18px 0 !important; }
   
   /* Fix mobile navigation scrolling */
   .nav-links.open {
@@ -572,6 +602,16 @@ section { padding: clamp(80px, 10vw, 140px) 0; }
     background-position: center center !important;
     background-attachment: scroll !important;
   }
+  
+  /* Fix home hero on small tablets */
+  .home-hero {
+    padding: 120px 0 60px !important;
+    background-size: cover !important;
+    background-position: center top !important;
+  }
+  .home-hero h1 { font-size: 40px !important; }
+  .hero-card { padding: 32px 28px !important; }
+  .hero-card .quote { font-size: 22px !important; }
   
   /* Fix mobile navigation scrolling */
   .nav-links.open {
